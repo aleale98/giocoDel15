@@ -1,0 +1,110 @@
+body{
+    font-style: italic;
+    font-size: 14pt;
+    text-align: center;
+}
+
+#puzzlearea{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    margin: auto;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile{
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    font-size: 40pt;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile:not([disabled=true]):hover{
+    border: 1px solid #FF0000;
+    color: #FF0000;
+}
+
+#tile_1_1{
+    background-image: url("Senzanome.png");
+    background-position: 0px 0px;
+}
+
+#tile_1_2{
+    background-image: url("Senzanome.png");
+    background-position: -100px 0px;
+}
+
+#tile_1_3{
+    background-image: url("Senzanome.png");
+    background-position: -200px 0px;
+}
+
+#tile_1_4{
+    background-image: url("Senzanome.png");
+    background-position: -300px 0px;
+}
+
+#tile_2_1{
+    background-image: url("Senzanome.png");
+    background-position: 0px -100px;
+}
+
+#tile_2_2{
+    background-image: url("Senzanome.png");
+    background-position: -100px -100px;
+}
+
+#tile_2_3{
+    background-image: url("Senzanome.png");
+    background-position: -200px -100px;
+}
+
+#tile_2_4{
+    background-image: url("Senzanome.png");
+    background-position: -300px -100px;
+}
+
+#tile_3_1{
+    background-image: url("Senzanome.png");
+    background-position: 0px -200px;
+}
+
+#tile_3_2{
+    background-image: url("Senzanome.png");
+    background-position: -100px -200px;
+}
+
+#tile_3_3{
+    background-image: url("Senzanome.png");
+    background-position: -200px -200px;
+}
+
+#tile_3_4{
+    background-image: url("Senzanome.png");
+    background-position: -300px -200px;
+}
+
+#tile_4_1{
+    background-image: url("Senzanome.png");
+    background-position: 0px -300px;
+}
+
+#tile_4_2{
+    background-image: url("Senzanome.png");
+    background-position: -100px -300px;
+}
+
+#tile_4_3{
+    background-image: url("Senzanome.png");
+    background-position: -200px -300px;
+}
+
+#tile_4_4{
+    background-color: #FFFFFF;
+}

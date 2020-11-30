@@ -1,7 +1,6 @@
 
 function init(){
-    var tiles = Array.from(document.getElementById("puzzlearea").querySelectorAll("div"));
-    console.log(typeof tiles);
+    var tiles = Array.from(document.getElementById("puzzlearea").querySelectorAll(".tile"));
     var ultimo = document.getElementById("puzzlearea").querySelector("#tile_4_4");
     for(let i = 0; i < tiles.length; i++){
             tiles[i].addEventListener("click", ev => cambia(tiles, tiles[i], ultimo));
@@ -10,26 +9,37 @@ function init(){
             tiles[i].style.order = i;
             tiles[i].setAttribute("disabled", true);   
     }
+    initBackground(tiles);
     document.getElementById("shufflebutton").addEventListener("click", ev => gioca(tiles));
    
 }
 
 
-function test(){
-    alert("button pressed");
+function initBackground(tiles){
+    let offsetX = 0;
+    let offsetY = 0;
+    for(let index = 0; index < tiles.length-1; index++){
+        if(index != 15){
+            tiles[index].style.backgroundImage = "url('background.jpg')";
+            offsetX = (-1)*(((index)*100) % 400);
+            if(index % 4 == 0 && index > 0){
+                offsetY = offsetY - 100;
+            } 
+        tiles[index].style.backgroundPosition = offsetX+"px "+offsetY+"px";
+        }
+    }
 }
 
 function gioca(tiles){
-    console.log(typeof tiles);
-    //i = 0;
-    /*while (i<15) {
+    i = 0;
+    while (i<15) {
         a = Math.random() * 15 >>> 0;
         b = Math.random() * 15 >>> 0;
         if (a==b) continue;
         scambia(tiles[a], tiles[b]);
         i++;
-    }*/
-};
+    }
+}
 
 function scambia({style: a}, {style: b}) {
 	temp=a.order;
